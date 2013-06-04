@@ -1,4 +1,9 @@
 wp-theme-functions
 ==================
 
-Wordpress theme functions file for paranoid folks. Take what you want leave what you think should be.
+Wordpress security functions for paranoid folks. (themes functions.php and .htaccess)
+Take what you want leave what you think should be.
+
+
+theme functions file and
+htaccess file added.

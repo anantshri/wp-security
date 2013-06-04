@@ -12,6 +12,13 @@ Options -Indexes
 
 DirectoryIndex index.php index.html /index.php
 
+#block wp-config.php
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+
+
 #cache control
 # BEGIN EXPIRES
 <IfModule mod_expires.c>

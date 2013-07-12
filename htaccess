@@ -179,6 +179,20 @@ order allow,deny
 deny from all
 </files>
 
+#blocking access to swfupload.swf
+<files swfupload.swf>
+order allow,deny
+deny from all
+</files>
+
+#blocking timthumb.php
+<files timthumb.php>
+order allow,deny
+deny from all
+</files>
+
+
+
 # fun with numbers :P
 ErrorDocument 400 /index.php
 ErrorDocument 404 /index.php

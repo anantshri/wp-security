@@ -203,4 +203,11 @@ ErrorDocument 500 http://127.0.0.1
 #ErrorDocument 400 /
 #ErrorDocument 404 /
 
+#username / attchment enumeration protection
+<IfModule mod_rewrite.c>
+RewriteCond %{QUERY_STRING} author=([0-9]*) [OR]
+RewriteCond %{QUERY_STRING} attachment_id=([0-9]*)
+RewriteRule ^(.*)$ /index.php [F,L]
+</IfModule>
+
 # after this let the wordpress code be present.

@@ -1,0 +1,399 @@
+#not fit for production#                                                                     
+                                                                     
+                                                                     
+                                             
+if ($request_method ~* "^(HEAD|TRACE|DELETE|TRACK|DEBUG)"){
+  set $rule_0 1$rule_0;
+}
+if ($rule_0 = "1"){
+	rewrite ^/(.*)$ /index.php last;
+}
+if ($http_user_agent ~ "^BlackWidow"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 1
+if ($http_user_agent ~ "^ChinaClaw"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^Custo"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^DISCo"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 5
+if ($http_user_agent ~ "^eCatch"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^EirGrabber"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^EmailSiphon"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^EmailWolf"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 10
+if ($http_user_agent ~ "^ExtractorPro"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^EyeNetIE"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^FlashGet"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^GetRight"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^GetWeb!"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^Go!Zilla"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^Go-Ahead-Got-It"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^GrabNet"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^Grafula"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^HMView"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~* "HTTrack"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 22
+#ignored: condition 23
+#ignored: condition 24
+if ($http_user_agent ~ "^InterGET"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 26
+if ($http_user_agent ~ "^JetCar"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 28
+if ($http_user_agent ~ "^larbin"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^LeechFTP"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 31
+#ignored: condition 32
+#ignored: condition 33
+if ($http_user_agent ~ "^Navroad"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^NearSite"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^NetAnts"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^NetSpider"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 38
+if ($http_user_agent ~ "^NetZIP"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^Octopus"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 41
+#ignored: condition 42
+if ($http_user_agent ~ "^PageGrabber"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 44
+if ($http_user_agent ~ "^pavuk"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^pcBrowser"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^RealDownload"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^ReGet"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^SiteSnagger"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^SmartDownload"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^SuperBot"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^SuperHTTP"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^Surfbot"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^tAkeOut"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^WWW-Mechanize"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^Teleport"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^VoidEYE"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 58
+#ignored: condition 59
+if ($http_user_agent ~ "^WebAuto"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^WebCopier"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^WebFetch"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 63
+if ($http_user_agent ~ "^WebLeacher"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^WebReaper"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^WebSauger"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 67
+#ignored: condition 68
+if ($http_user_agent ~ "^WebStripper"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^WebWhacker"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^WebZIP"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^Widow"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+if ($http_user_agent ~ "^WWWOFFLE"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 74
+if ($http_user_agent ~ "^Toata"){
+	set $rule_1 1;
+	return 403;
+	break;
+}
+#ignored: condition 76
+#ignored: condition 77
+if ($http_user_agent ~* "^w3af.sourceforge.net"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "dirbuster"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "nikto"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "sqlmap"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "fimap"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "nessus"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "whatweb"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "Openvas"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "jbrofuzz"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "libwhisker"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "webshag"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "(havij|Netsparker|libwww-perl|python|nikto|curl|scan|java|winhttp|clshttp|loader)"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "(%0A|%0D|%27|%3C|%3E|%00)"){
+	set $rule_2 1;
+	break;
+}
+if ($http_user_agent ~* "(;|<|>|'|"|)|(|%0A|%0D|%22|%27|%28|%3C|%3E|%00).*(libwww-perl|python|nikto|curl|scan|java|winhttp|HTTrack|clshttp|archiver|loader|email|harvest|extract|grab|miner)"){
+	set $rule_2 1;
+	break;
+}
+if ($http_acunetix_product ~ "^WVS"){
+	set $rule_2 1;
+	break;
+}
+if ($uri ~* "(<|%3C)([^s]*s)+cript.*(>|%3E)"){
+	set $rule_2 1;
+	break;
+}
+if ($uri ~* "(<|%3C)([^e]*e)+mbed.*(>|%3E)"){
+	set $rule_2 1;
+	break;
+}
+if ($uri ~* "(<|%3C)([^o]*o)+bject.*(>|%3E)"){
+	set $rule_2 1;
+	break;
+}
+if ($uri ~* "(<|%3C)([^i]*i)+frame.*(>|%3E)"){
+	set $rule_2 1;
+	break;
+}
+if ($uri ~* "base64_(en|de)code[^(]*([^)]*)"){
+	set $rule_2 1;
+	break;
+}
+if ($uri ~* "(%0A|%0D|\r|\n)"){
+	set $rule_2 1;
+	break;
+}
+if ($uri ~* "union([^a]*a)+ll([^s]*s)+elect"){
+	set $rule_2 1;
+	break;
+}
+if ($rule_2 = "1"){
+	rewrite ^/(.*)$ http://127.0.0.1 permanent;
+}

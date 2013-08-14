@@ -1,0 +1,8 @@
+#username / attchment enumeration protection
+# ref : http://blog.anantshri.info/mission-attachment-protection
+# ref : http://blog.anantshri.info/wordpress-user-enumeration-poc-shell-script/
+<IfModule mod_rewrite.c>
+RewriteCond %{QUERY_STRING} author=([0-9]*) [OR]
+RewriteCond %{QUERY_STRING} attachment_id=([0-9]*)
+RewriteRule ^(.*)$ /index.php [F,L]
+</IfModule>

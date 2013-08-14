@@ -1,0 +1,32 @@
+#block access to various files 
+# wp-config.php holds your configuration file.
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+<Files .htaccess,.svn,error_log>
+order allow,deny
+deny from all
+</Files>
+#blocking access to readme.txt and html
+# plugin and themes have readme.txt
+<files readme.txt>
+order allow,deny
+deny from all
+</files>
+<files readme.html>
+order allow,deny
+deny from all
+</files>
+#SWFupload still exist in core to support plugin's 
+#blocking access to swfupload.swf
+<files swfupload.swf>
+order allow,deny
+deny from all
+</files>
+# another commonly exploited script.
+#blocking timthumb.php
+<files timthumb.php>
+order allow,deny
+deny from all
+</files>

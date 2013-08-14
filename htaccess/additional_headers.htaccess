@@ -1,0 +1,17 @@
+#Add Custom Headers
+# Add SAMEORIGIN for non wp-admin sections also.
+Header add X-Frame-Options "SAMEORIGIN"
+# XSS protection
+Header add X-XSS-Protection "1; mode=block"
+# Use this only if all scripts are in same domain.
+Header add X-Content-Security-Policy "default-src 'self'"
+# IE Specific header
+Header add X-Content-Type-Options "nosniff"
+#Remove various unnecessary tags : This setting might not work at all. Based on server configuration.
+# Remove ETAG
+Header unset Etag
+# Remove Server Signature 
+Header unset Server
+ServerSignature Off
+# Remove PingBack Header
+Header unset X-Pingback

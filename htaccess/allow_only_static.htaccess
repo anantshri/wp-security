@@ -1,0 +1,7 @@
+#allow only resources (images, css ,js)
+#Ref : http://www.slideshare.net/erchetansoni/complete-wordpress-security-by-chetan-soni-sr-security-specialist-at-secugenius-security-solutions
+Order deny,allow
+Deny from all
+<Files ~ ".(xml|css|jpg|jpe?g|png|gif|js)$">
+Allow from all
+</Files> 

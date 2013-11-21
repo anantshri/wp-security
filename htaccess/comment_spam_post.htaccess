@@ -1,0 +1,9 @@
+#Stop Comment Posting without proper Referer
+# Ref : http://www.slideshare.net/erchetansoni/complete-wordpress-security-by-chetan-soni-sr-security-specialist-at-secugenius-security-solutions
+
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} POST
+RewriteCond %{REQUEST_URI} .wp-comments-post\.php*
+RewriteCond %{HTTP_REFERER} !.*yourblog.com.* [OR]
+RewriteCond %{HTTP_USER_AGENT} ^$
+RewriteRule (.*) ^http://%{REMOTE_ADDR}/$ [R=301,L]

@@ -1,0 +1,5 @@
+DirectoryIndex index.txt
+## Ref : http://journalxtra.com/websiteadvice/wordpress-security-hardening-htaccess-rules/
+## secure directory by disabling script execution
+AddHandler cgi-script .php .pl .py .jsp .asp .htm .html .shtml .sh .cgi .*
+Options -ExecCGI

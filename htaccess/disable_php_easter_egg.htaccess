@@ -1,0 +1,6 @@
+## Disallow PHP Easter Eggs (can be used in fingerprinting attacks to determine
+## your PHP version). See http://www.0php.com/php_easter_egg.php and
+## http://osvdb.org/12184 for more information
+## Ref : http://journalxtra.com/websiteadvice/wordpress-security-hardening-htaccess-rules/
+RewriteCond %{QUERY_STRING} \=PHP[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} [NC]
+RewriteRule .* - [F,L]

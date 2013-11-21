@@ -1,0 +1,10 @@
+## Registration is disabled so...
+## deny access to wp-signup.php and wp-register.php
+## Ref : http://journalxtra.com/websiteadvice/wordpress-security-hardening-htaccess-rules/
+RewriteCond %{REQUEST_URI} wp-signup\.php [NC,OR]
+RewriteCond %{QUERY_STRING} wp-signup\.php [NC,OR]
+RewriteCond %{THE_REQUEST} wp-signup\.php [NC,OR]
+RewriteCond %{REQUEST_URI} wp-register\.php [NC,OR]
+RewriteCond %{QUERY_STRING} wp-register\.php [NC,OR]
+RewriteCond %{THE_REQUEST} wp-register\.php [NC]
+RewriteRule .* - [F,NS,L]

@@ -1,0 +1,9 @@
+## Deny Access to All But the Active Theme
+## Whitelist the active theme. Change "active-theme" to the name of your active theme's directory
+## Ref : http://journalxtra.com/websiteadvice/wordpress-security-hardening-htaccess-rules/
+RewriteCond %{REQUEST_URI} !.*/wp-content/themes/active-theme/.* [NC]
+RewriteCond %{THE_REQUEST} !.*/wp-content/themes/active-theme/.* [NC]
+## Block access to any directory or document not in the active-theme's directory.
+RewriteCond %{REQUEST_URI} ^.*/wp-content/themes/.* [NC,OR]
+RewriteCond %{THE_REQUEST} ^.*/wp-content/themes/.* [NC]
+RewriteRule .* - [F,L]

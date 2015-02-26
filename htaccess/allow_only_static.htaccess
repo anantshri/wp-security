@@ -1,4 +1,6 @@
 #allow only resources (images, css ,js)
+# Just to be clear this code should never be placed on webroot. this is specifically useful for sections like uploads folder where we only want static content to be present
+# also it is to be ensured that if we have any specific extension in such folders that needs to be added in the list below. example zip etc
 #Ref : http://www.slideshare.net/erchetansoni/complete-wordpress-security-by-chetan-soni-sr-security-specialist-at-secugenius-security-solutions
 Order deny,allow
 Deny from all

@@ -1,4 +1,7 @@
 DirectoryIndex index.txt
+# Just to be clear this code should never be placed on webroot. this is specifically useful for sections like uploads folder where we only want static content to be present
+# also it is to be ensured that if we have any specific extension in such folders that needs to be added in the list below. example php55
+# this does inverse of allow_only_static as this basically assign all executable's to cgi-script and then disables CGI Execution in a way stopping execution of any file at server side.
 ## Ref : http://journalxtra.com/websiteadvice/wordpress-security-hardening-htaccess-rules/
 ## secure directory by disabling script execution
 AddHandler cgi-script .php .pl .py .jsp .asp .htm .html .shtml .sh .cgi .*

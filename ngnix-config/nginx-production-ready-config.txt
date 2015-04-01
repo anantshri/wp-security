@@ -1,0 +1,45 @@
+	location / {
+    # Place all your normal rules
+    # add below code block for blocking some basic scanners.
+    # 
+		# Blocking bad bots
+		if ($http_user_agent ~* "(havij|Netsparker|nmap|wpscan|libwww-perl|python|nikto|scan|java|winhttp|clshttp|loader)")
+		{
+			rewrite ^(.*)$ http://127.0.0.1 redirect;
+		}
+		if ($query_string ~ "author=([0-9]*)")
+		{
+			return 404;
+		}
+		if ($query_string ~ "attachment_id=([0-9]*)")
+		{
+			return 404;
+		}
+  		if (!-e $request_filename)
+    		{
+        		rewrite ^(.+)$ /index.php?q=$1 last;
+    		}
+	}
+	# Don't allow any PHP file in uploads folder
+	location ~* /(?:uploads|files)/.*\.php$ {
+        	deny all;
+	}
+
+	location ~* \.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)$|^(\..*|Entries.*|Repository|Root|Tag|Template)$|\.php_
+	{
+        	return 444;
+	}
+
+	#nocgi
+	location ~* \.(pl|cgi|py|sh|lua)\$ {
+        	return 444;
+	}
+
+	#disallow
+	location ~* (roundcube|webdav|smtp|http\:|soap|w00tw00t) {
+        	return 444;
+	}
+
+	location ~ /(\.DS_Store|wp-config.php|readme.html.gz|readme.txt.gz|readme.html|readme.txt|error_log|license.txt|changelog|changelog.txt) {
+		deny all;
+	}

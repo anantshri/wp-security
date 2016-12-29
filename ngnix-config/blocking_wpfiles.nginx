@@ -1,0 +1,71 @@
+	# Common disclosure locations
+	location ~ /(\.DS_Store|wp-config.php|readme.html.gz|readme.txt.gz|readme.html|readme.txt|error_log|license.txt|changelog|changelog.txt) {
+		return 444;
+		deny all;
+	}
+
+	# defeat wp fingerprinting : 4.4.2
+	# WP emoji is something not generally used anyways
+	location ~ ^/wp-includes/js/wp-emoji-loader.min.js {
+		deny all;
+		return 444;
+	}
+
+	# Blocking common files
+	location ~ ^/(wp-signup.php|xmlrpc.php|install.php) {
+		deny all;
+		return 444;
+	}
+	# Blocking wp-json
+	location ~ /wp-json/ {
+		deny all;
+		return 444;
+	}
+	# blocking data folder locations
+	location ~ /wp-content/ {
+		deny all;
+		return 444;
+	}
+	# Deny access to wp-config.php file
+	location = /wp-config.php {
+		deny all;
+		return 444;
+	}
+
+	# Deny access to specific files in the /wp-content/ directory (including sub-folders)
+	location ~* ^/data/.*.(txt|md|exe)$ {
+		deny all;
+		return 444;
+	}
+
+	# block access to .htaccess and any file with .ht extension
+	location ~ /\.ht {
+		deny all;
+		return 444;
+
+	}
+
+	# Don't allow any PHP file in uploads folder
+	location ~* /(?:uploads|files)/.*\.php$ {
+        	deny all;
+		return 444;
+
+	}
+
+	location ~* \.(engine|log|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)$|^(\..*|Entries.*|Repository|Root|Tag|Template)$|\.php_
+	{
+			deny all;
+        	return 444;
+	}
+
+	#nocgi
+	location ~* \.(pl|cgi|py|sh|lua)\$ {
+			deny all;
+        	return 444;
+	}
+
+	#disallow
+	location ~* (roundcube|webdav|smtp|http\:|soap|w00tw00t) {
+			deny all;
+        	return 444;
+	}

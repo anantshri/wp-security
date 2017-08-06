@@ -13,7 +13,7 @@ RewriteCond %{HTTP_USER_AGENT} libwhisker [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} webshag [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} (havij|Netsparker|libwww-perl|python|nikto|curl|scan|java|winhttp|clshttp|loader) [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} (%0A|%0D|%27|%3C|%3E|%00) [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} (;|<|>|'|"|\)|\(|%0A|%0D|%22|%27|%28|%3C|%3E|%00).*(libwww-perl|python|nikto|curl|scan|java|winhttp|HTTrack|clshttp|archiver|loader|email|harvest|extract|grab|miner) [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} (;|<|>|'|"|%_"\)|\(|%0A|%0D|%22|%27|%28|%3C|%3E|%00).*(libwww-perl|python|nikto|curl|scan|java|winhttp|HTTrack|clshttp|archiver|loader|email|harvest|extract|grab|miner) [NC,OR]
 RewriteCond %{HTTP:Acunetix-Product} ^WVS
 RewriteCond %{REQUEST_URI} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
 RewriteCond %{REQUEST_URI} (<|%3C)([^e]*e)+mbed.*(>|%3E) [NC,OR]
